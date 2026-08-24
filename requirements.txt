@@ -1,21 +1,42 @@
-qiskit[visualization]==2.4.0
-qiskit-serverless==0.27.0
-qiskit-ibm-runtime==0.41.1
-qiskit-ibm-catalog==0.11.0
-qiskit-aer==0.17.2
-qiskit-addon-sqd==0.12.0
-ffsim==0.0.60
-qiskit-optimization[cplex]==0.7.0
-python-sat==1.8.dev24
-moocore==0.1.8
-geometric==1.1
-quimb==1.11.2
+# Core Qiskit
+qiskit[visualization]==1.3.1
+qiskit-ibm-runtime==0.23.0
+qiskit-aer==0.15.1
+
+# Qiskit Extensions
+qiskit-optimization==0.6.0
+qiskit-machine-learning==0.7.1
+qiskit-nature==0.7.1
+qiskit-finance==0.3.1
+qiskit-experiments==0.5.0
+
+# Alternative Quantum Frameworks
+cirq==1.3.0
+pennylane==0.34.0
+
+# Data Science & Visualization
+numpy==1.24.3
+pandas==2.0.3
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.17.0
+scipy==1.11.3
+scikit-learn==1.3.1
+networkx==3.2
+
+# Jupyter & Interactive Computing
+jupyter==1.0.0
+jupyterlab==4.0.9
+ipython==8.18.1
+ipykernel==6.26.0
+ipywidgets==8.1.1
+notebook==7.0.6
+
+# Utilities & Visualization
 graphviz==0.21
-cvxpy==1.7.3
-ipykernel==7.0.1
-jupyter==1.1.1
-networkx==3.6.1
-qopt-best-practices @ git+https://github.com/qiskit-community/qopt-best-practices.git
-qaoa_training_pipeline @ git+https://github.com/qiskit-community/qaoa_training_pipeline.git
-qiskit-addon-opt-mapper==0.1.0
-qc-grader @ git+https://github.com/qiskit-community/Quantum-Challenge-Grader.git
+tqdm==4.66.1
+
+# Development Tools
+black==23.10.1
+flake8==6.1.0
+pytest==7.4.3
