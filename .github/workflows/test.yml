@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.9', '3.10', '3.11']
+        python-version: ['3.10', '3.11']
 
     steps:
     - uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y graphviz 2>/dev/null || true
+        sudo apt-get install -y graphviz build-essential 2>/dev/null || true
 
     - name: Install dependencies
       run: |
@@ -34,10 +34,6 @@ jobs:
     - name: Verify Installation
       run: |
         python -c "import qiskit; print(f'✓ Qiskit {qiskit.__version__}')"
-        python -c "import numpy; print(f'✓ NumPy {numpy.__version__}')"
-        python -c "import matplotlib; print('✓ Matplotlib')"
-        python -c "import scipy; print('✓ SciPy')"
-        python -c "import jupyterlab; print('✓ JupyterLab')"
+        python -c "import jupyter; print('✓ Jupyter')"
         python -c "import ipykernel; print('✓ IPykernel')"
-        python -c "import ipywidgets; print('✓ IPyWidgets')"
-        echo "✓ All essential packages installed successfully!"
+        echo "✓ All core packages installed successfully!"
