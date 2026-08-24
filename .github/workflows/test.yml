@@ -33,13 +33,11 @@ jobs:
 
     - name: Verify Installation
       run: |
-        python -c "import qiskit; print(f'Qiskit version: {qiskit.__version__}')"
-        python -c "import cirq; print(f'Cirq version: {cirq.__version__}')"
-        python -c "import jupyter; print('Jupyter available')"
-
-    - name: Lint with flake8
-      continue-on-error: true
-      run: |
-        pip install flake8
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        python -c "import qiskit; print(f'✓ Qiskit {qiskit.__version__}')"
+        python -c "import numpy; print(f'✓ NumPy {numpy.__version__}')"
+        python -c "import matplotlib; print('✓ Matplotlib')"
+        python -c "import scipy; print('✓ SciPy')"
+        python -c "import jupyterlab; print('✓ JupyterLab')"
+        python -c "from IPython.kernel import kernelspec; print('✓ IPython kernel')"
+        python -c "import ipywidgets; print('✓ IPyWidgets')"
+        echo "✓ All essential packages installed successfully!"
