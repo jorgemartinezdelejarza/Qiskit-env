@@ -1,6 +1,5 @@
 qiskit[visualization]==2.4.0
 qiskit-ibm-runtime==0.47.0
-qiskit-ibm-catalog==0.11.0
 qiskit-aer==0.17.2
 qiskit-addon-sqd==0.12.0
 ffsim==0.0.60
