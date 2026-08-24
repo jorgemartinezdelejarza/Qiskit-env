@@ -37,27 +37,20 @@ jupyter lab
 
 ## What's Included
 
-### Quantum Computing Frameworks
-- **Qiskit**: IBM's open-source quantum computing framework
-- **Qiskit IBM Runtime**: Execute circuits on IBM quantum hardware
-- **Qiskit Optimization**: Quantum algorithms for optimization problems
-- **Qiskit Machine Learning**: Quantum machine learning algorithms
-- **Qiskit Nature**: Quantum chemistry and physics simulations
-- **Qiskit Finance**: Quantum algorithms for financial applications
-- **Cirq**: Google's quantum framework
-- **PennyLane**: Xanadu's quantum ML framework
+### Quantum Computing
+- **Qiskit**: IBM's open-source quantum computing framework with visualization
+- **Qiskit IBM Runtime**: Execute circuits on real IBM quantum hardware
+- **Qiskit Aer**: High-performance quantum simulator
 
-### Data Science & Analysis
-- NumPy, Pandas, SciPy
-- Matplotlib, Seaborn, Plotly for visualization
-- Scikit-learn for classical ML
-- NetworkX for graph algorithms
+### Scientific Computing
+- **NumPy**: Numerical arrays and operations
+- **SciPy**: Scientific and technical computing
+- **Matplotlib**: 2D plotting and visualization
 
-### Development Tools
-- Jupyter Lab with extensions
-- IPython kernel for interactive computing
-- Black for code formatting
-- Pytest for testing
+### Interactive Notebooks
+- **JupyterLab**: Full-featured notebook environment
+- **IPykernel**: IPython kernel for Jupyter
+- **IPyWidgets**: Interactive widgets in notebooks
 
 ## Repository Structure
 
