@@ -2,11 +2,17 @@
 
 A complete GitHub Codespaces environment for running "The Road To Practitioner Program" with Jupyter notebooks, Qiskit, and all required dependencies pre-installed.
 
+## 🚀 Quick Launch
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new?hide_repo_select=true&ref=main&repo=jorgemartinezdelejarza/Qiskit-env)
+
+Or manually: Click the **Code** button → **Codespaces** → **Create codespace on main**
+
 ## Quick Start
 
 ### Using GitHub Codespaces
 
-1. Click the **Code** button on this repository
+1. Click the launch button above, or use the **Code** button on this repository
 2. Select the **Codespaces** tab
 3. Click **Create codespace on main**
 4. Wait for the codespace to initialize (dependencies will install automatically via `devcontainer.json`)
