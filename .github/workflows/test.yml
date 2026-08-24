@@ -38,6 +38,6 @@ jobs:
         python -c "import matplotlib; print('✓ Matplotlib')"
         python -c "import scipy; print('✓ SciPy')"
         python -c "import jupyterlab; print('✓ JupyterLab')"
-        python -c "from IPython.kernel import kernelspec; print('✓ IPython kernel')"
+        python -c "import ipykernel; print('✓ IPykernel')"
         python -c "import ipywidgets; print('✓ IPyWidgets')"
         echo "✓ All essential packages installed successfully!"
