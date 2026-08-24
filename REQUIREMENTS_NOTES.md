@@ -2,11 +2,48 @@
 
 ## Overview
 
-The `requirements.txt` file has been carefully curated to provide a stable, conflict-free environment for learning quantum computing with Qiskit.
+The `requirements.txt` file uses **flexible version ranges** to provide a stable, conflict-free environment for learning quantum computing with Qiskit while allowing pip to automatically resolve dependencies.
+
+## Versioning Strategy
+
+### Flexible Ranges Instead of Pinned Versions
+
+We use **version ranges** (e.g., `>=1.0.0,<2.0.0`) instead of pinned versions (e.g., `==1.3.1`). This approach:
+
+✅ **Allows pip to resolve dependencies** - Package managers can find compatible versions
+✅ **Prevents conflicts** - Different packages can use different compatible versions
+✅ **Future-proof** - Works with patch releases that fix bugs
+✅ **Educational focus** - Exact versions aren't critical for learning
+
+### Version Range Examples
+
+```
+qiskit[visualization]>=1.0.0,<2.0.0    # Use any 1.x version
+numpy>=1.21.0,<2.0.0                   # Stable 1.x only (v2 is breaking)
+pandas>=1.5.0,<2.1.0                   # Compatible with both 1.x and 2.0.x
+jupyterlab>=4.0.0                      # Latest 4.x or higher
+```
+
+### Why This Matters
+
+**Example conflict that we fixed:**
+```
+❌ OLD (Pinned):
+   qiskit-finance==0.3.1  (requires pandas<1.4.0)
+   pandas==2.0.3          (incompatible!)
+   → pip cannot resolve this
+
+✅ NEW (Ranges):
+   qiskit-finance>=0.3.0  (allows any compatible 0.3+)
+   pandas>=1.5.0,<2.1.0   (allows modern pandas)
+   → pip finds a working combination
+```
 
 ## Why We Removed Certain Packages
 
-### Removed Git-based Dependencies
+### Removed Packages
+
+#### Git-based Dependencies
 
 The original requirements included three git-based packages that caused dependency conflicts during installation:
 
@@ -16,7 +53,15 @@ The original requirements included three git-based packages that caused dependen
 
 **Problem:** These packages had interconnected version dependencies that created impossible resolution conflicts in pip. For example, `qaoa_training_pipeline` depended on a specific commit of `qopt-best-practices`, while `requirements.txt` tried to reference a different version.
 
-**Solution:** These are specialized research/competition tools, not essential for beginners learning quantum computing. The core Qiskit ecosystem (Optimization, ML, Nature, Finance) provides all the learning material needed.
+**Solution:** These are specialized research/competition tools, not essential for beginners learning quantum computing. The core Qiskit ecosystem (Optimization, ML, Nature) provides all the learning material needed.
+
+#### Outdated qiskit-finance
+
+**qiskit-finance==0.3.1** was also removed because:
+- Required `pandas<1.4.0` (from 2018!) - incompatible with modern data science stack
+- No compatible newer version available
+- Optional extension - core quantum learning doesn't require it
+- Can be installed separately later if needed: `pip install qiskit-finance`
 
 ## What We Kept
 
