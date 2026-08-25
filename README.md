@@ -8,11 +8,17 @@ Jupyter notebooks for learning quantum computing with Qiskit. Everything is pre-
 
 Click: **Code** → **Codespaces** → **Create codespace on main**
 
-Wait 3-5 minutes for dependencies to install automatically.
-
-### 2. Start Jupyter Lab
+### 2. Install Dependencies
 
 Open a terminal (`Ctrl + \`` or **Terminal** → **New Terminal**) and run:
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs all Qiskit libraries and Jupyter Lab (takes 3-5 minutes).
+
+### 3. Start Jupyter Lab
 
 ```bash
 jupyter lab
@@ -20,7 +26,7 @@ jupyter lab
 
 Jupyter Lab opens automatically in your browser.
 
-### 3. Open a Notebook
+### 4. Open a Notebook
 
 In the file browser on the left, navigate to `notebooks/` and click `01_getting_started.ipynb`
 

@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "pip install -r requirements.txt && python -m ipykernel install --user --name practitioner --display-name 'Python (Practitioner)'",
+  "postCreateCommand": "bash -c 'pip install --upgrade pip && pip install -r requirements.txt && python -m ipykernel install --user --name practitioner --display-name \"Python (Practitioner)\"'",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,14 +16,9 @@
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
-        "python.linting.enabled": true,
-        "python.linting.pylintEnabled": true,
         "jupyter.jupyterServerType": "local"
       }
     }
   },
-  "remoteUser": "vscode",
-  "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly"
-  ]
+  "remoteUser": "vscode"
 }
