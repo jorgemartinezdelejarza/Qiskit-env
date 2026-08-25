@@ -1,175 +1,68 @@
-# The Road To Practitioner Program - Online Environment
+# The Road To Practitioner Program
 
-A complete GitHub Codespaces environment for running "The Road To Practitioner Program" with Jupyter notebooks, Qiskit, and all required dependencies pre-installed.
+Jupyter notebooks for learning quantum computing with Qiskit. Everything is pre-installed and ready to use.
 
-## 🚀 Quick Launch
+## ⚡ Quick Start (3 Steps)
 
-### First Time: Create a Codespace
+### 1. Launch Codespace
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new?hide_repo_select=true&ref=main&repo=jorgemartinezdelejarza/Qiskit-env)
+Click: **Code** → **Codespaces** → **Create codespace on main**
 
-**OR** Click: **Code** → **Codespaces** → **Create codespace on main**
+Wait 3-5 minutes for dependencies to install automatically.
 
-### Subsequent Times: Resume Existing Codespace
+### 2. Start Jupyter Lab
 
-Click: **Code** → **Codespaces** → Select your existing codespace to resume (everything is pre-installed)
-
-## Quick Start
-
-### First Launch
-
-1. Click the "Open in GitHub Codespaces" button above
-2. Wait 3-5 minutes for the environment to initialize
-   - You'll see a terminal showing dependency installation
-   - The `postCreateCommand` automatically installs all packages and the Jupyter kernel
-3. Once complete, open a terminal and run:
-   ```bash
-   jupyter lab
-   ```
-4. Browser opens with Jupyter Lab automatically (or click the displayed link)
-
-### Subsequent Launches
-
-1. Go to GitHub → **Code** → **Codespaces**
-2. Click on your saved codespace to resume (takes ~30 seconds)
-3. All dependencies are already installed ✅
-4. Run: `jupyter lab`
-
-### Local Development
-
-If you prefer to run this locally:
+Open a terminal (`Ctrl + \`` or **Terminal** → **New Terminal**) and run:
 
 ```bash
-# Clone the repository
-git clone <repo-url>
-cd Qiskit-env
-
-# Create a virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Launch Jupyter Lab
 jupyter lab
 ```
 
-## What's Included
+Jupyter Lab opens automatically in your browser.
 
-### Quantum Computing
-- **Qiskit**: IBM's open-source quantum computing framework with visualization
-- **Qiskit IBM Runtime**: Execute circuits on real IBM quantum hardware
-- **Qiskit Aer**: High-performance quantum simulator
+### 3. Open a Notebook
 
-### Scientific Computing
-- **NumPy**: Numerical arrays and operations
-- **SciPy**: Scientific and technical computing
-- **Matplotlib**: 2D plotting and visualization
+In the file browser on the left, navigate to `notebooks/` and click `01_getting_started.ipynb`
 
-### Interactive Notebooks
-- **JupyterLab**: Full-featured notebook environment
-- **IPykernel**: IPython kernel for Jupyter
-- **IPyWidgets**: Interactive widgets in notebooks
+**That's it!** You can now run quantum code with Qiskit.
 
-## Repository Structure
+## 📝 How to Run Code
 
-```
-.
-├── .devcontainer/
-│   └── devcontainer.json       # Codespaces configuration
-├── notebooks/                  # Jupyter notebooks directory
-├── requirements.txt            # Python dependencies
-├── README.md                   # This file
-└── setup.py                    # Package configuration (optional)
-```
+In any notebook cell:
 
-## Creating and Running Notebooks
-
-### In Codespaces/Local Environment
-
-```bash
-# Start Jupyter Lab
-jupyter lab
-
-# Or use classic Notebook
-jupyter notebook
-```
-
-The Jupyter interface will open in your browser. Create new notebooks or open existing ones in the `notebooks/` directory.
-
-### Python Kernel
-
-The environment includes a custom Jupyter kernel named "Python (Practitioner)" which is configured to use all installed packages. Select this kernel when creating new notebooks.
-
-## Environment Variables
-
-If you need to work with IBM Quantum services, set your credentials:
-
-```bash
-export IBM_QUANTUM_TOKEN='your_token_here'
-```
-
-For GitHub Codespaces, use Codespace Secrets:
-1. Go to Settings → Codespaces → Secrets
-2. Add new secret: `IBM_QUANTUM_TOKEN`
-
-## Troubleshooting
-
-### Jupyter Lab won't start
-```bash
-# Reinstall jupyter dependencies
-pip install --upgrade --force-reinstall jupyter jupyterlab ipykernel
-python -m ipykernel install --user --name practitioner --display-name 'Python (Practitioner)'
-```
-
-### Module import errors
-```bash
-# Reinstall all requirements
-pip install --upgrade -r requirements.txt
-```
-
-### Codespace initialization fails
-The `postCreateCommand` in `.devcontainer/devcontainer.json` handles setup automatically. If it fails:
-1. Open a terminal in the codespace
-2. Run: `pip install -r requirements.txt`
-3. Run: `python -m ipykernel install --user --name practitioner --display-name 'Python (Practitioner)'`
-
-## Additional Resources
-
-- [Qiskit Documentation](https://qiskit.org/documentation/)
-- [IBM Quantum Composer](https://quantum-computing.ibm.com/)
-- [Jupyter Documentation](https://jupyter.org/)
-- [GitHub Codespaces Documentation](https://docs.github.com/en/codespaces)
-
-## Next Steps
-
-1. Create a new notebook in the `notebooks/` directory
-2. Start learning quantum computing with Qiskit
-3. Run your first quantum circuit!
-
-Example first notebook code:
 ```python
-from qiskit import QuantumCircuit, QuantumProgram
+from qiskit import QuantumCircuit
 from qiskit.primitives import Sampler
 
-# Create a simple Bell state
+# Create a circuit
 qc = QuantumCircuit(2)
 qc.h(0)
 qc.cx(0, 1)
-
-# Measure
 qc.measure_all()
 
-# Run
+# Run it
 sampler = Sampler()
 result = sampler.run(qc).result()
 print(result)
 ```
 
-## Support
+Press `Shift + Enter` to run a cell.
 
-For issues with:
-- **Qiskit**: Visit [Qiskit GitHub](https://github.com/Qiskit/qiskit)
-- **This environment**: Check the GitHub Issues section
-- **Jupyter**: Visit [Jupyter Community](https://jupyter.org/community)
+## 📦 What's Installed
+
+- **Qiskit** - Quantum computing framework
+- **Jupyter Lab** - Notebook environment
+- **NumPy, SciPy, Matplotlib** - Scientific computing
+
+See `requirements.txt` for the full list.
+
+## 🔄 Next Time
+
+Just click: **Code** → **Codespaces** → Select your saved codespace
+
+Everything is already installed. Just run `jupyter lab` and you're ready to go.
+
+## 📚 Resources
+
+- [Qiskit Docs](https://docs.quantum.ibm.com/)
+- [Jupyter Lab Guide](https://jupyterlab.readthedocs.io/)
