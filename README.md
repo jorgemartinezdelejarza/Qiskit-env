@@ -2,7 +2,7 @@
 
 Jupyter notebooks for learning quantum computing with Qiskit. Everything is pre-installed and ready to use.
 
-## ⚡ Quick Start (3 Steps)
+## ⚡ Quick Start (2 Steps)
 
 ### 1. Launch Codespace
 
@@ -16,21 +16,22 @@ Open a terminal (`Ctrl + \`` or **Terminal** → **New Terminal**) and run:
 pip install -r requirements.txt
 ```
 
-This installs all Qiskit libraries and Jupyter Lab (takes 3-5 minutes).
+This installs all Qiskit libraries (takes 3-5 minutes).
 
-### 3. Start Jupyter Lab
+### 3. Open a Notebook
 
+In the file browser on the left, click `notebooks/01_getting_started.ipynb`
+
+VS Code will open the notebook directly. Click the **Run All** button (▶️) or run cells with **Shift+Enter**.
+
+**That's it!** You can now run quantum code with Qiskit.
+
+#### Alternative: Use Jupyter Lab
+
+If you prefer Jupyter Lab, run in the terminal:
 ```bash
 jupyter lab
 ```
-
-Jupyter Lab opens automatically in your browser.
-
-### 4. Open a Notebook
-
-In the file browser on the left, navigate to `notebooks/` and click `01_getting_started.ipynb`
-
-**That's it!** You can now run quantum code with Qiskit.
 
 ## 📝 How to Run Code
 
