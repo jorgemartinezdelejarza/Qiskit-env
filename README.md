@@ -4,22 +4,36 @@ A complete GitHub Codespaces environment for running "The Road To Practitioner P
 
 ## 🚀 Quick Launch
 
+### First Time: Create a Codespace
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new?hide_repo_select=true&ref=main&repo=jorgemartinezdelejarza/Qiskit-env)
 
-Or manually: Click the **Code** button → **Codespaces** → **Create codespace on main**
+**OR** Click: **Code** → **Codespaces** → **Create codespace on main**
+
+### Subsequent Times: Resume Existing Codespace
+
+Click: **Code** → **Codespaces** → Select your existing codespace to resume (everything is pre-installed)
 
 ## Quick Start
 
-### Using GitHub Codespaces
+### First Launch
 
-1. Click the launch button above, or use the **Code** button on this repository
-2. Select the **Codespaces** tab
-3. Click **Create codespace on main**
-4. Wait for the codespace to initialize (dependencies will install automatically via `devcontainer.json`)
-5. Once ready, open the Jupyter notebook launcher:
+1. Click the "Open in GitHub Codespaces" button above
+2. Wait 3-5 minutes for the environment to initialize
+   - You'll see a terminal showing dependency installation
+   - The `postCreateCommand` automatically installs all packages and the Jupyter kernel
+3. Once complete, open a terminal and run:
    ```bash
    jupyter lab
    ```
+4. Browser opens with Jupyter Lab automatically (or click the displayed link)
+
+### Subsequent Launches
+
+1. Go to GitHub → **Code** → **Codespaces**
+2. Click on your saved codespace to resume (takes ~30 seconds)
+3. All dependencies are already installed ✅
+4. Run: `jupyter lab`
 
 ### Local Development
 
