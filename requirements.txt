@@ -15,7 +15,7 @@ cvxpy==1.7.3
 ipykernel==7.0.1
 jupyter==1.1.1
 networkx==3.6.1
-qopt-best-practices @ git+https://github.com/qiskit-community/qopt-best-practices.git
-qaoa_training_pipeline @ git+https://github.com/qiskit-community/qaoa_training_pipeline.git
+qopt-best-practices @ git+https://github.com/qiskit-community/qopt-best-practices.git@a861d46e6d77c64b87124a50216995d2d2d6d5fe
+qaoa_training_pipeline @ git+https://github.com/qiskit-community/qaoa_training_pipeline.git@5522b2191f93f7d2e95e76bac3a08a76191a07ec
 qiskit-addon-opt-mapper==0.1.0
-qc-grader @ git+https://github.com/qiskit-community/Quantum-Challenge-Grader.git
+qc-grader @ git+https://github.com/qiskit-community/Quantum-Challenge-Grader.git@f9ad18059321c225999041db6ddc1f0acc5f204c
