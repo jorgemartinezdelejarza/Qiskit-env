@@ -20,7 +20,7 @@ This installs all Qiskit libraries (takes 3-5 minutes).
 
 ### 3. Open a Notebook
 
-In the file browser on the left, click `notebooks/01_getting_started.ipynb`
+In the file browser on the left, click `notebooks/Lab 0 Activation_Workshop.ipynb`
 
 VS Code will open the notebook directly. Click the **Run All** button (▶️) or run cells with **Shift+Enter**.
 
@@ -33,33 +33,12 @@ If you prefer Jupyter Lab, run in the terminal:
 jupyter lab
 ```
 
-## 📝 How to Run Code
-
-In any notebook cell:
-
-```python
-from qiskit import QuantumCircuit
-from qiskit.primitives import Sampler
-
-# Create a circuit
-qc = QuantumCircuit(2)
-qc.h(0)
-qc.cx(0, 1)
-qc.measure_all()
-
-# Run it
-sampler = Sampler()
-result = sampler.run(qc).result()
-print(result)
-```
-
-Press `Shift + Enter` to run a cell.
 
 ## 📦 What's Installed
 
 - **Qiskit** - Quantum computing framework
 - **Jupyter Lab** - Notebook environment
-- **NumPy, SciPy, Matplotlib** - Scientific computing
+- **NumPy, SciPy, Matplotlib, Others** - Scientific computing
 
 See `requirements.txt` for the full list.
 
