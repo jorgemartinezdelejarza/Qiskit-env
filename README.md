@@ -1,4 +1,4 @@
-# The Road To Practitioner Program
+# Setting up Qiskit Codespace
 
 Jupyter notebooks for learning quantum computing with Qiskit. Everything is pre-installed and ready to use.
 
