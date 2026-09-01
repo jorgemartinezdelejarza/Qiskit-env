@@ -19,3 +19,6 @@ qopt-best-practices @ git+https://github.com/qiskit-community/qopt-best-practice
 qaoa_training_pipeline @ git+https://github.com/qiskit-community/qaoa_training_pipeline.git@5522b2191f93f7d2e95e76bac3a08a76191a07ec
 qiskit-addon-opt-mapper==0.1.0
 qc-grader @ git+https://github.com/qiskit-community/Quantum-Challenge-Grader.git
+qiskit-addon-mpf
+qiskit-addon-utils
+pandas
