@@ -22,3 +22,5 @@ qc-grader @ git+https://github.com/qiskit-community/Quantum-Challenge-Grader.git
 qiskit-addon-mpf
 qiskit-addon-utils
 pandas
+mthree
+qiskit-addon-obp
